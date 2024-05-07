@@ -25,7 +25,7 @@ class SigninPageState extends State<SigninPage>{
 
   SignIn(String email, String password, String confirmPassword)async{
     if(email == "" && password == "" && confirmPassword == ""){
-      showDialog(context: context, 
+      await showDialog(context: context, 
       builder: (context) => AlertDialog(
         title: Text("Enter the Required Fields", style: TextStyle(color:Colors.white),),
         actions: [
@@ -253,7 +253,7 @@ class SigninPageState extends State<SigninPage>{
                       SignInButton(Buttons.google,onPressed: ()async{
                           await signInWithGoogle();
 
-                          showDialog(context: context, 
+                          await showDialog(context: context, 
                                       builder: (context){
                                         return Center(
                                           child: CircularProgressIndicator()

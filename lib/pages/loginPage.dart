@@ -18,7 +18,7 @@ class LogInPageState extends State<LogInPage>{
 
 
 LogIn(String email, String password)async{
-    showDialog(context: context, 
+    await showDialog(context: context, 
     builder: (context){
       return Center(
         child: CircularProgressIndicator()
